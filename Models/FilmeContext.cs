@@ -7,9 +7,7 @@ namespace FilmesCRUDRazor.Models
         public FilmeContext(DbContextOptions<FilmeContext> options)
             : base(options)
         {
-            //Default 
-            // Segue esse padrão de contexto para 
-            
+ 
         }
 
         public DbSet<Filme> Filme {get ; set;}

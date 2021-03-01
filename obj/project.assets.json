@@ -447,6 +447,18 @@
           "lib/netstandard2.0/_._": {}
         }
       },
+      "Microsoft.EntityFrameworkCore.InMemory/5.0.3": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore": "5.0.3"
+        },
+        "compile": {
+          "lib/netstandard2.1/Microsoft.EntityFrameworkCore.InMemory.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.1/Microsoft.EntityFrameworkCore.InMemory.dll": {}
+        }
+      },
       "Microsoft.EntityFrameworkCore.Relational/5.0.3": {
         "type": "package",
         "dependencies": {
@@ -3363,6 +3375,20 @@
         "lib/netstandard2.0/_._",
         "microsoft.entityframeworkcore.analyzers.5.0.3.nupkg.sha512",
         "microsoft.entityframeworkcore.analyzers.nuspec"
+      ]
+    },
+    "Microsoft.EntityFrameworkCore.InMemory/5.0.3": {
+      "sha512": "TWNs01wuxmtYS8tThmOW2YPXjZEMUiStFWYw/vCIYfru+wlgQa/OAQxQjIJyFpRgy6ORj3KSqZkXbkjjHRv7MQ==",
+      "type": "package",
+      "path": "microsoft.entityframeworkcore.inmemory/5.0.3",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "lib/netstandard2.1/Microsoft.EntityFrameworkCore.InMemory.dll",
+        "lib/netstandard2.1/Microsoft.EntityFrameworkCore.InMemory.xml",
+        "microsoft.entityframeworkcore.inmemory.5.0.3.nupkg.sha512",
+        "microsoft.entityframeworkcore.inmemory.nuspec"
       ]
     },
     "Microsoft.EntityFrameworkCore.Relational/5.0.3": {
@@ -8970,6 +8996,7 @@
   "projectFileDependencyGroups": {
     "net5.0": [
       "Microsoft.EntityFrameworkCore >= 5.0.3",
+      "Microsoft.EntityFrameworkCore.InMemory >= 5.0.3",
       "Microsoft.EntityFrameworkCore.Sqlite >= 5.0.3",
       "Microsoft.EntityFrameworkCore.Sqlserver >= 5.0.3",
       "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 5.0.2"
@@ -9015,6 +9042,10 @@
         "targetAlias": "net5.0",
         "dependencies": {
           "Microsoft.EntityFrameworkCore": {
+            "target": "Package",
+            "version": "[5.0.3, )"
+          },
+          "Microsoft.EntityFrameworkCore.InMemory": {
             "target": "Package",
             "version": "[5.0.3, )"
           },

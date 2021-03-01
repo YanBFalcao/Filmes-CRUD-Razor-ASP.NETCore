@@ -28,9 +28,14 @@ namespace FilmesCRUDRazor
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddRazorPages();
+            services.AddControllers();
 
-            services.AddDbContext<FilmeContext>(options => options.
-            UseSqlServer(Configuration.GetConnectionString("FilmeContext")));
+            services.AddDbContext<FilmeContext>(opt => opt.UseInMemoryDatabase("FilmeContext"));
+
+            // services.AddScoped<DataContext, DataContext>();
+
+            //services.AddDbContext<FilmeContext>(options => options.
+            //UseSqlServer(Configuration.GetConnectionString("FilmeContext")));
 
         }
 
@@ -51,9 +56,9 @@ namespace FilmesCRUDRazor
             app.UseHttpsRedirection();
             app.UseStaticFiles();
 
-            app.UseRouting();
+            app.UseRouting(); // Esquema de Rotas
 
-            app.UseAuthorization();
+            app.UseAuthorization(); 
 
             app.UseEndpoints(endpoints =>
             {

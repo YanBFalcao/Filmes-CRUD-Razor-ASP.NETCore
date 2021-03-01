@@ -1,4 +1,5 @@
 using System;
+using Microsoft.EntityFrameworkCore;
 
 namespace FilmesCRUDRazor.Models
 {
@@ -9,5 +10,7 @@ namespace FilmesCRUDRazor.Models
         public DateTime DataLancamento { get; set; }
         public string Genero { get; set; }
         public decimal Preco { get; set; }
+        public Filme filmesLista { get; set; }
+
     }
 } 
